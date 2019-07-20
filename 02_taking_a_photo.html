@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>WebRTC Taking a Photo</title>
+    <style>
+      /* 定义四种滤镜 */
+      .none {
+        -webkit-filter: none;
+        filter: none;
+      }
+      /* 模糊度 */
+      .blur {
+        -webkit-filter: blur(3px);
+        filter: blur(3px);
+      }
+      /* 灰度 */
+      .grayscale {
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
+      }
+
+      /* 反转 */
+      .invert {
+        -webkit-filter: invert(1);
+        filter: invert(1);
+      }
+
+      /* 深褐色 */
+      .sepia {
+        -webkit-filter: sepia(1);
+        filter: sepia(1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <video autoplay playsinline id="player"></video>
+    <p></p>
+    <select id="filter">
+      <option value="none">None</option>
+      <option value="blur">blur</option>
+      <option value="grayscale">Grayscale</option>
+      <option value="invert">Invert</option>
+      <option value="sepia">sepia</option>
+    </select>
+
+    <canvas id="photo"></canvas>
+    <button id="TakePhoto">Take</button>
+    <button id="SavePhoto">Save</button>
+  </body>
+  <script src="./js/taking_a_photo.js"></script>
+</html>
